@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Encased — Dima Volgin</title>
+  <meta name="description" content="My role as a gameplay scripter and technical designer on Encased: A Sci-Fi Post-Apocalyptic RPG (Dark Crystal Games).">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌀</text></svg>">
+  <link rel="stylesheet" href="../assets/style.css">
+  <!-- Analytics (Umami Cloud): paste your Website ID and uncomment the line below
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="YOUR-WEBSITE-ID"></script>
+  -->
+</head>
+<body>
+  <header class="site-header">
+    <div class="inner">
+      <a class="brand" href="../">Dima Volgin</a>
+      <nav class="nav">
+        <a href="../#projects">Projects</a>
+        <a href="../#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="cover"><img src="../images/encased.jpg" onerror="this.remove()" alt="" style="object-position: center 85%"></div>
+
+  <main class="narrow">
+    <div class="project-head">
+      <div class="icon" aria-hidden="true">🌀</div>
+      <h1>Encased</h1>
+      <dl class="props">
+        <dt>Developer</dt><dd>Dark Crystal Games</dd>
+        <dt>Release Date</dt><dd>Sep 7, 2021</dd>
+        <dt>Steam Page</dt><dd><a href="https://store.steampowered.com/app/921800/Encased_A_SciFi_PostApocalyptic_RPG" target="_blank" rel="noopener" data-umami-event="steam-encased">store.steampowered.com/app/921800</a></dd>
+      </dl>
+    </div>
+
+    <article class="content">
+      <p>Encased is an isometric role-playing game in a sci-fi post-apocalyptic setting developed by Dark Crystal Games studio. It was inspired by the first two Fallout games, Divinity: Original Sin, Baldur’s Gate, and like.</p>
+      <p>The game is non-linear, allowing players to kill any in-game character, open any door and any chest, progress stealthily, play as a pacifist, act mentally powerless, work in a party, or go solo. Encased is highly systemic, where systems interact not only with the player but also with other systems and the game world around them.</p>
+      <p>As a gameplay scripter I was in charge of designing, documenting, prototyping, developing, iterating bug fixing, and polishing systems, events, quests, puzzles, secrets, and combat encounters.</p>
+      <p>Technologies I used on a daily basis:</p>
+      <ul>
+        <li>Unity engine as a base</li>
+        <li>Custom in-house RPG framework</li>
+        <li>C# programming language.</li>
+      </ul>
+
+      <p>Table of contents:</p>
+      <ul class="toc" id="toc"></ul>
+
+      <div class="callout"><span class="ci">💡</span><div>Please note: I did not create art, animations, UI, VFX, final texts, sound, engine-level programming, or low-level systems. These aspects were managed by other team members, with whom I closely collaborated during the development of each feature below.</div></div>
+
+      <h2>Gameplay Scripting</h2>
+      <p>This section is primarily focused on my general responsibilities related to creating and scripting content on game locations.</p>
+
+      <h3>Game Content Design and Scripting</h3>
+      <p>This involved designing and scripting quests, puzzles, combat encounters, random encounters, secrets, entities, and other interactive content within the game's locations. It was crucial to consider a multitude of gameplay options, all systems, and player builds when detailing events.</p>
+      <p>Quest design for Encased is a unique challenge because the player has the freedom to kill any character, including main quest NPCs, and still progress through the game. Furthermore, the game unfolds in an open world, where the player can go anywhere and complete quests in any order.</p>
+
+      <h3>Creating NPC Behaviours in Locations</h3>
+      <p>Ensuring NPCs don't stand still in locations. Implementing logical and diverse behavior patterns creates a sense of a living world.</p>
+
+      <h3>Creating Pre-Battle Scripted Scenes</h3>
+      <p>Some battles start with a short in-game scene depicting the arrival of enemies. During these scenes, the player retains control.</p>
+      <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/W2BswejwP5o?rel=0" title="Encased — Pre-Battle Scripted Scenes" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe></div>
+
+      <h3>Other Responsibilities</h3>
+      <ul>
+        <li>Mentoring new team members.</li>
+        <li>Scripting and integrating achievements on platforms</li>
+        <li>Developing debug tools</li>
+        <li>Integrating assets: 2D art, sound events, voiceovers</li>
+        <li>NPC combat reaction system</li>
+        <li>Creating and configuring entities within a component-based system, supporting inheritance</li>
+        <li>Supporting the project with content and fix patches while maintaining save compatibility</li>
+      </ul>
+
+      <h2>Technical Game Design</h2>
+      <p>This section is primarily focused on the systems and mechanics I was responsible for. For each feature, I maintained close communication with all studio departments to deliver it from conception to release. A comprehensive list of my responsibilities included:</p>
+      <ul>
+        <li>Ownership and oversight of the feature</li>
+        <li>Game design</li>
+        <li>Documentation</li>
+        <li>Prototyping</li>
+        <li>Technical implementation through scripting (both visual and C#) and editor tools</li>
+        <li>Setting up related entities on game locations.</li>
+      </ul>
+
+      <h3>Crime System</h3>
+      <p>A complex system managing the world's response to hostile or criminal player’s actions.</p>
+      <p>When the player commits a crime, it leaves behind evidence, prompting NPCs’ investigations. If the player is spotted, NPCs respond based on the severity of the crime. The player's choices include bribery, persuasion, intimidation, fines, combat, or imprisonment. In prison, all possessions are confiscated, and a prisoner's uniform is provided. The player can either wait out their sentence or attempt an escape, which is also considered a crime.</p>
+      <p>Eventually, this leads to a decline in reputation with the faction, resulting in potential ambushes. In settlements, residents may avoid interaction with the player.</p>
+      <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/64S9pCv78cs?rel=0" title="Encased — Crime System" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe></div>
+      <p>During the development process, numerous quests and events were adapted to integrate seamlessly with the crime system.</p>
+
+      <h3>Reinforcement System</h3>
+      <p>If the player triggers a large-scale battle on an inhabited location, periodic reinforcements arrive to assist the inhabitants in combat. There are six primary factions in the game, each with its own set of reinforcements.</p>
+      <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/dyPY3dNpy7E?rel=0" title="Encased — Reinforcement System" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe></div>
+
+      <h3>Town Raids</h3>
+      <p>Gameplay implementation of the dangerous wastelands narrative. Also, it helps demonstrate how the game world functions on its own.</p>
+      <p>Occasionally, settlements come under attack from raiders, wild animals, or hostile robots. The player can assist the inhabitants, earning gratitude from the locals and reputation with the faction. Alternatively, the player can use the opportunity to attack weakened settlers and take control of the settlement.</p>
+      <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/Tfph-SNI9O8?rel=0" title="Encased — Town Raids" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe></div>
+
+      <h3>Abandoned Towns</h3>
+      <p>World reactivity for players to witness the consequences of their actions. This system implements the narrative of anomalies affecting the bodies of the dead.</p>
+      <p>If, for any reason, the majority of inhabitants in a settlement dies, the player returning to the location after some time will discover that the dead have transformed into hostile zombies. These zombies acquire names and inherit all the belongings of their predecessors. If there are still survivors in the settlement, the player can help them fight the zombies, or choose to leave.</p>
+      <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/UtZ2umEFipU?rel=0" title="Encased — Abandoned Towns" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe></div>
+
+      <h3>Vehicles</h3>
+      <p>Vehicles allow the player to move faster on the global map, store items in the trunk, bypass certain random encounters, and honk the horn. While driving, the player encounters unique vehicle-related events. Vehicles are also integrated into the crime system: stealing or damaging a car belonging to another character is considered a crime.</p>
+      <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/Xojtk1iJapM?rel=0" title="Encased — Vehicles" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe></div>
+      <p>During the development process, numerous quests, events, and locations were adapted to integrate seamlessly with this system.</p>
+    </article>
+
+    <a class="back" href="../#projects">← All projects</a>
+  </main>
+
+  <script src="../assets/site.js"></script>
+</body>
+</html>

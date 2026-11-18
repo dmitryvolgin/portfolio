@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tenet of the Spark — Dima Volgin</title>
+  <meta name="description" content="My role as a technical designer on Tenet of the Spark (ROAR Games): player mechanics, AI archetypes, boss fight, gameplay systems.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🥊</text></svg>">
+  <link rel="stylesheet" href="../assets/style.css">
+  <!-- Analytics (Umami Cloud): paste your Website ID and uncomment the line below
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="YOUR-WEBSITE-ID"></script>
+  -->
+</head>
+<body>
+  <header class="site-header">
+    <div class="inner">
+      <a class="brand" href="../">Dima Volgin</a>
+      <nav class="nav">
+        <a href="../#projects">Projects</a>
+        <a href="../#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="cover"><img src="../images/tenet-of-the-spark.jpg" onerror="this.remove()" alt="" style="object-position: center 60%"></div>
+
+  <main class="narrow">
+    <div class="project-head">
+      <div class="icon" aria-hidden="true">🥊</div>
+      <h1>Tenet of the Spark</h1>
+      <dl class="props">
+        <dt>Developer</dt><dd>ROAR Games</dd>
+        <dt>Steam Page</dt><dd><a href="https://store.steampowered.com/app/2565010/Tenet_of_the_Spark/" target="_blank" rel="noopener" data-umami-event="steam-tenet">store.steampowered.com/app/2565010</a></dd>
+      </dl>
+    </div>
+
+    <article class="content">
+      <p>Tenet of the Spark is a cinematic action game where you seamlessly switch between 3 timelines — modern day, Viking age, and Aztec world — to get the edge in battle. Crush enemies, solve time-bending puzzles, and explore 3 distinct worlds full of rich history and unique characters. Developed by ROAR Games studio.</p>
+      <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/2imsx74Zv8U?rel=0" title="Tenet of the Spark — Trailer" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe></div>
+      <p>As a technical designer I was in charge of prototyping, developing, iterating, polishing, bug fixing, and optimization of player mechanics, AI archetypes, gameplay systems, and interactive content on levels.</p>
+      <p>Technologies I used on a daily basis:</p>
+      <ul>
+        <li>Unreal Engine 5 editor and tools</li>
+        <li>Blueprints</li>
+        <li>C++ programming language.</li>
+      </ul>
+
+      <p>Table of contents:</p>
+      <ul class="toc" id="toc"></ul>
+
+      <div class="callout"><span class="ci">💡</span><div>Please note: Tenet of the Spark has not been released yet, so I cannot share screenshots, videos, or any other non-public materials from the project. The sections below describe my responsibilities only — I did not create art, animations, UI, VFX, final texts, sound, engine-level programming, or low-level systems. These aspects were managed by other team members, with whom I closely collaborated during the development of each feature below.</div></div>
+
+      <h3>Player Mechanics and Interactions</h3>
+      <p>Prototyping, implementation, and iteration of the player's core moveset and the ways the player interacts with the world. Each mechanic had to read clearly across all three timelines, since the player can switch between modern day, Viking age, and Aztec world at any moment.</p>
+      <ul>
+        <li>Perfect block and perfect dodge abilities and windows</li>
+        <li>Charged attacks for each of the three worlds, with the Aztec charged attacks as my main focus</li>
+        <li>Various boomerang attacks: pull, push, double, round, chain</li>
+        <li>Double wall jump</li>
+        <li>Pickups</li>
+      </ul>
+
+      <h3>AI Archetypes</h3>
+      <p>Development of enemy archetypes, each with its own behaviour, attack patterns, and abilities. For every archetype I set up the full package — animations, VFX, and SFX — and tuned it together with the animation, audio, and combat design teams until the fight felt right.</p>
+      <ul>
+        <li>Buffer</li>
+        <li>Tank</li>
+        <li>Roller</li>
+      </ul>
+
+      <h3>Boss Fight</h3>
+      <p>Implementation of the game's boss encounter: a fight across three phases, with all three worlds available to the player throughout. I built each phase with its animations, VFX, and SFX in place, then iterated with the design, animation, and audio teams on the pacing, the transitions between phases, and the scripted beats that frame the fight.</p>
+
+      <h3>Combat Environment</h3>
+      <p>Development of the environmental hazards that make the surroundings part of the fight, and their behaviour across timelines.</p>
+      <ul>
+        <li>Pushable column</li>
+        <li>Brazier</li>
+        <li>Pit</li>
+        <li>Bumpers</li>
+        <li>Combat destructibles</li>
+      </ul>
+
+      <h3>Interactive Environment and Puzzles</h3>
+      <p>Implementation of the smart objects that level designers build encounters, traversal, and puzzles out of, along with the systems underneath them. A large part of this work was supporting level designers directly: scripting the setups they needed, and making the objects configurable enough for them to build and iterate on content.</p>
+      <ul>
+        <li>Doors</li>
+        <li>Rotatable platform</li>
+        <li>Pushable cart</li>
+        <li>Hanging platform</li>
+        <li>Puzzle toolkit and its components</li>
+      </ul>
+
+      <h3>Scripted Events</h3>
+      <p>Scripting of the in-game events that carry the narrative and drive the cinematic pacing of the levels, coordinating gameplay logic with animation, VFX, and sound so that each moment lands the way it was designed.</p>
+      <ul>
+        <li>Narrative objects</li>
+        <li>Flashbacks</li>
+      </ul>
+
+      <h3>Camera Modes</h3>
+      <p>Implementation and tuning of the game's camera modes to support the cinematic presentation. This included handing control between gameplay and scripted moments, and keeping the framing readable during timeline switches.</p>
+      <ul>
+        <li>Fixed / static camera</li>
+        <li>Narrow space camera</li>
+      </ul>
+
+      <h3>Cross-functional Collaboration and Technical Support</h3>
+      <p>For each feature I maintained close communication with the design, animation, audio, art, and engineering teams, taking it from conception to a shippable state and making sure gameplay elements were fun, polished, technically correct, and optimized. Alongside this I supported the technical game design needs of the project and acted as the bridge between the gameplay design and engineering teams — translating design intent into technical requirements, and engine constraints back into terms designers could work with.</p>
+    </article>
+
+    <a class="back" href="../#projects">← All projects</a>
+  </main>
+
+  <script src="../assets/site.js"></script>
+</body>
+</html>
