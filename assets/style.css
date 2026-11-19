@@ -60,7 +60,7 @@ img { display: block; max-width: 100%; }
 .card:hover { text-decoration: none; }
 .card:hover h2 { text-decoration: underline; text-underline-offset: 4px; }
 .thumb {
-  aspect-ratio: 4 / 3; border-radius: var(--radius);
+  aspect-ratio: 3 / 4; border-radius: var(--radius);
   background: var(--thumb); overflow: hidden;
 }
 .thumb img { width: 100%; height: 100%; object-fit: cover; transition: transform .3s ease; }
@@ -71,11 +71,14 @@ img { display: block; max-width: 100%; }
 
 .split {
   border-top: 1px solid var(--line);
-  padding: 72px 0 96px;
+  padding: 72px 0;
   display: flex; flex-wrap: wrap; gap: 24px 64px;
 }
 .split > h2 { flex: 0 0 160px; margin: 0; font-size: 17px; font-weight: 600; }
 .split > div { flex: 1 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 8px; }
+.split > div p { margin: 0; color: var(--body); }
+#about > div { gap: 16px; }
+#contact { padding-bottom: 96px; }
 
 /* ---------- Footer ---------- */
 .site-footer {
