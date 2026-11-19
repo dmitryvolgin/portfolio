@@ -6,36 +6,40 @@
   <title>Atomic Heart — Dima Volgin</title>
   <meta name="description" content="My role as a technical designer on Atomic Heart (Mundfish): gameplay systems, player abilities and interactive content.">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🫀</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap">
   <link rel="stylesheet" href="../assets/style.css">
   <!-- Analytics (Umami Cloud): paste your Website ID and uncomment the line below
   <script defer src="https://cloud.umami.is/script.js" data-website-id="YOUR-WEBSITE-ID"></script>
   -->
 </head>
 <body>
-  <header class="site-header">
-    <div class="inner">
+  <div class="container">
+    <header class="site-header">
       <a class="brand" href="../">Dima Volgin</a>
-      <nav class="nav">
+      <nav class="nav" aria-label="Main">
         <a href="../#projects">Projects</a>
         <a href="../#contact">Contact</a>
       </nav>
-    </div>
-  </header>
+    </header>
 
-  <div class="cover"><img src="../images/atomic-heart.jpg" onerror="this.remove()" alt="" style="object-position: center 50%"></div>
+    <main>
+      <section class="project-top">
+        <a class="back" href="../#projects">← All projects</a>
+        <h1>Atomic Heart</h1>
+        <p class="sub">Mundfish · 2023 · Unreal Engine 4</p>
+      </section>
 
-  <main class="narrow">
-    <div class="project-head">
-      <div class="icon" aria-hidden="true">🫀</div>
-      <h1>Atomic Heart</h1>
+      <div class="cover"><img src="../images/atomic-heart.jpg" onerror="this.remove()" alt="Atomic Heart cover" style="object-position: center"></div>
+
       <dl class="props">
-        <dt>Developer</dt><dd>Mundfish</dd>
-        <dt>Release Date</dt><dd>Feb 20, 2023</dd>
-        <dt>Steam Page</dt><dd><a href="https://store.steampowered.com/app/668580/Atomic_Heart/" target="_blank" rel="noopener" data-umami-event="steam-atomic-heart">store.steampowered.com/app/668580</a></dd>
+          <div><dt>Developer</dt><dd>Mundfish</dd></div>
+          <div><dt>Release Date</dt><dd>Feb 20, 2023</dd></div>
+          <div><dt>Steam Page</dt><dd><a class="accent" href="https://store.steampowered.com/app/668580/Atomic_Heart/" target="_blank" rel="noopener" data-umami-event="steam-atomic-heart">View on Steam →</a></dd></div>
       </dl>
-    </div>
 
-    <article class="content">
+      <article class="content">
       <p>Atomic Heart is a first-person shooter in an alternative soviet setting developed by Mundfish studio.</p>
       <p>As a technical designer I was in charge of prototyping, developing, iterating, polishing, bug fixing, and optimization of gameplay systems, player abilities, and interactive content on levels.</p>
       <p>Technologies I used on a daily basis:</p>
@@ -48,7 +52,7 @@
       <p>Table of contents:</p>
       <ul class="toc" id="toc"></ul>
 
-      <div class="callout"><span class="ci">💡</span><div>Please note: I did not create art, animations, UI, VFX, final texts, sound, engine-level programming, or low-level systems. These aspects were managed by other team members, with whom I closely collaborated during the development of each feature below.</div></div>
+      <div class="callout">Please note: I did not create art, animations, UI, VFX, final texts, sound, engine-level programming, or low-level systems. These aspects were managed by other team members, with whom I closely collaborated during the development of each feature below.</div>
 
       <h3>Ecosystem</h3>
       <p>A system that allows the player to disable all cameras and robots in the current region for some time. Disabled robots will re-activate upon taking damage.</p>
@@ -67,8 +71,17 @@
       <div class="video r43"><iframe src="https://www.youtube-nocookie.com/embed/x1y_Io12uck?rel=0" title="Atomic Heart — New Game +" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe></div>
     </article>
 
-    <a class="back" href="../#projects">← All projects</a>
-  </main>
+      <nav class="pager" aria-label="Projects">
+        <a class="prev" href="../#projects">← All projects</a>
+        <a class="next" href="tenet-of-the-spark.html">Next: Tenet of the Spark →</a>
+      </nav>
+    </main>
+
+    <footer class="site-footer">
+      <span>© 2026 Dima Volgin</span>
+      <a class="accent" href="mailto:dmitryvolgin1996@gmail.com" data-umami-event="contact-email">dmitryvolgin1996@gmail.com</a>
+    </footer>
+  </div>
 
   <script src="../assets/site.js"></script>
 </body>
