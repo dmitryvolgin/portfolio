@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap">
-  <link rel="stylesheet" href="../assets/style.css?v=4">
+  <link rel="stylesheet" href="../assets/style.css?v=6">
   <script defer src="https://cloud.umami.is/script.js" data-website-id="734f66b2-72e3-453f-8a4b-711d15af3ee4"></script>
 </head>
 <body>
@@ -37,6 +37,7 @@
           <div><dt>Steam Page</dt><dd><a class="accent" href="https://store.steampowered.com/app/2565010/Tenet_of_the_Spark/" target="_blank" rel="noopener" data-umami-event="steam-tenet-of-the-spark">View on Steam →</a></dd></div>
       </dl>
 
+      <div class="project-body">
       <article class="content">
       <p>Tenet of the Spark is a cinematic action game where you seamlessly switch between 3 timelines — modern day, Viking age, and Aztec world — to get the edge in battle. Crush enemies, solve time-bending puzzles, and explore 3 distinct worlds full of rich history and unique characters. Developed by ROAR Games studio.</p>
       <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/2imsx74Zv8U?rel=0" title="Tenet of the Spark — Trailer" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe></div>
@@ -46,15 +47,17 @@
         <li>Unreal Engine 5 editor and tools</li>
         <li>Blueprints</li>
         <li>Gameplay Ability System (GAS)</li>
-        <li>C++ programming language.</li>
+        <li>C++ programming language</li>
       </ul>
 
-      <p>Table of contents:</p>
-      <ul class="toc" id="toc"></ul>
+      <nav class="toc-card" aria-label="Contents">
+        <p class="toc-title">Contents</p>
+        <ol class="toc" id="toc"></ol>
+      </nav>
 
       <div class="callout">Please note: Tenet of the Spark has not been released yet. All videos on this page show alpha footage from a work-in-progress build and do not represent the final quality of the game. The sections below describe my responsibilities only — I did not create art, animations, UI, VFX, final texts, sound, engine-level programming, or low-level systems. These aspects were managed by other team members, with whom I closely collaborated during the development of each feature below.</div>
 
-      <h3>Combat Mechanics</h3>
+      <h2>Combat Mechanics</h2>
       <p>Design, prototyping, implementation, and iteration of the player's combat abilities. Each ability was built to reveal the personality and fighting style of its character: the Viking's brute strength, the Aztec's evasive ranged combat, and Will's agility and quick melee strikes.</p>
       <ul>
         <li>Perfect block and perfect dodge abilities and windows</li>
@@ -68,7 +71,7 @@
       <p>The Viking's special ground slam attack that deals area damage.</p>
       <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/cfcLZXg4N1Y?rel=0" title="Tenet of the Spark — Viking Ground Slam" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe></div>
 
-      <h3>AI Archetypes</h3>
+      <h2>AI Archetypes</h2>
       <p>Development of enemy archetypes, each with its own behaviour, attack patterns, and abilities. For every archetype I set up the full package — animations, VFX, and SFX — and tuned it together with the animation, audio, and combat design teams until the fight felt right.</p>
       <ul>
         <li>Buffer</li>
@@ -78,12 +81,12 @@
       <p>The Buffer archetype empowers its allies and keeps its distance from the player.</p>
       <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/eCX4usfHyg0?rel=0" title="Tenet of the Spark — Buffer Archetype" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe></div>
 
-      <h3>Boss Fight</h3>
+      <h2>Boss Fight</h2>
       <p>Implementation of the game's boss encounter: a fight across three phases, with all three worlds available to the player throughout. I built each phase with its animations, VFX, and SFX in place, then iterated with the design, animation, and audio teams on the pacing, the transitions between phases, and the scripted beats that frame the fight.</p>
       <p>The first two phases of the boss fight, each with its own set of boss abilities. In the third phase, the boss fights as a regular melee enemy.</p>
       <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/mi5ttHNdzlM?rel=0" title="Tenet of the Spark — Boss Fight" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe></div>
 
-      <h3>Combat Environment</h3>
+      <h2>Combat Environment</h2>
       <p>Development of the environmental hazards that make the surroundings part of the fight, and their behaviour across timelines.</p>
       <ul>
         <li>Pushable column</li>
@@ -101,7 +104,7 @@
       <p>The Viking throws enemies off a cliff.</p>
       <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/SlPLibFH8AY?rel=0" title="Tenet of the Spark — Throwing Enemies into a Pit" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe></div>
 
-      <h3>Interactive Environment and Puzzles</h3>
+      <h2>Interactive Environment and Puzzles</h2>
       <p>Implementation of the smart objects that level designers build encounters, traversal, and puzzles out of, along with the systems underneath them. A large part of this work was supporting level designers directly: scripting the setups they needed, and making the objects configurable enough for them to build and iterate on content.</p>
       <ul>
         <li>Doors</li>
@@ -129,7 +132,7 @@
       <p>Puzzle generators: in Will's world they are generators, in the Aztec world they are fires to be lit.</p>
       <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/WzmKlUaVkpA?rel=0" title="Tenet of the Spark — Puzzle Generators" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe></div>
 
-      <h3>Scripted Events</h3>
+      <h2>Scripted Events</h2>
       <p>Scripting of the in-game events that carry the narrative and drive the cinematic pacing of the levels, coordinating gameplay logic with animation, VFX, and sound so that each moment lands the way it was designed.</p>
       <ul>
         <li>Narrative objects</li>
@@ -138,20 +141,25 @@
       <p>A narrative interaction used as a storytelling tool.</p>
       <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/wEpGQVg4qwI?rel=0" title="Tenet of the Spark — Narrative Object" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe></div>
 
-      <h3>Camera Modes</h3>
+      <h2>Camera Modes</h2>
       <p>Implementation and tuning of the game's camera modes to support the cinematic presentation. This included handing control between gameplay and scripted moments, and keeping the framing readable during timeline switches.</p>
       <ul>
         <li>Fixed / static camera</li>
         <li>Narrow space camera</li>
       </ul>
 
-      <h3>Cross-functional Collaboration and Technical Support</h3>
+      <h2>Cross-functional Collaboration and Technical Support</h2>
       <p>For each feature I maintained close communication with the design, animation, audio, art, and engineering teams, taking it from conception to a shippable state and making sure gameplay elements were fun, polished, technically correct, and optimized. Alongside this I supported the technical game design needs of the project and acted as the bridge between the gameplay design and engineering teams — translating design intent into technical requirements, and engine constraints back into terms designers could work with.</p>
-    </article>
+      </article>
+      <aside class="toc-side" aria-label="On this page">
+        <p class="toc-title">On this page</p>
+        <ul class="toc-list" id="toc-side"></ul>
+      </aside>
+      </div>
 
       <nav class="pager" aria-label="Projects">
         <a class="prev" href="../#projects">← All projects</a>
-        <a class="next" href="encased.html">Next: Encased →</a>
+        <a class="next" href="atomic-heart.html">Next: Atomic Heart →</a>
       </nav>
     </main>
 
@@ -161,6 +169,6 @@
     </footer>
   </div>
 
-  <script src="../assets/site.js?v=3"></script>
+  <script src="../assets/site.js?v=4"></script>
 </body>
 </html>

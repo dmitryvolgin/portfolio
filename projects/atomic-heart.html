@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap">
-  <link rel="stylesheet" href="../assets/style.css?v=4">
+  <link rel="stylesheet" href="../assets/style.css?v=6">
   <script defer src="https://cloud.umami.is/script.js" data-website-id="734f66b2-72e3-453f-8a4b-711d15af3ee4"></script>
 </head>
 <body>
@@ -38,6 +38,7 @@
           <div><dt>Steam Page</dt><dd><a class="accent" href="https://store.steampowered.com/app/668580/Atomic_Heart/" target="_blank" rel="noopener" data-umami-event="steam-atomic-heart">View on Steam →</a></dd></div>
       </dl>
 
+      <div class="project-body">
       <article class="content">
       <p>Atomic Heart is a first-person shooter in an alternative soviet setting developed by Mundfish studio.</p>
       <p>As a technical designer I was in charge of prototyping, developing, iterating, polishing, bug fixing, and optimization of gameplay systems, player abilities, and interactive content on levels.</p>
@@ -45,34 +46,41 @@
       <ul>
         <li>Unreal Engine 4 editor and tools</li>
         <li>Blueprints</li>
-        <li>C++ programming language.</li>
+        <li>C++ programming language</li>
       </ul>
 
-      <p>Table of contents:</p>
-      <ul class="toc" id="toc"></ul>
+      <nav class="toc-card" aria-label="Contents">
+        <p class="toc-title">Contents</p>
+        <ol class="toc" id="toc"></ol>
+      </nav>
 
       <div class="callout">Please note: I did not create art, animations, UI, VFX, final texts, sound, engine-level programming, or low-level systems. These aspects were managed by other team members, with whom I closely collaborated during the development of each feature below.</div>
 
-      <h3>Ecosystem</h3>
+      <h2>Ecosystem</h2>
       <p>A system that allows the player to disable all cameras and robots in the current region for some time. Disabled robots will re-activate upon taking damage.</p>
       <div class="video r43"><iframe src="https://www.youtube-nocookie.com/embed/BE2-tW1nlyM?rel=0" title="Atomic Heart — Ecosystem" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe></div>
 
-      <h3>Zipline</h3>
+      <h2>Zipline</h2>
       <p>An interactive rope that allows the player to slide from start to finish.</p>
       <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/_FYNzbw5jBA?rel=0" title="Atomic Heart — Zipline" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe></div>
 
-      <h3>Jumping out of the car</h3>
+      <h2>Jumping out of the car</h2>
       <p>The player's ability to jump out of the car while it's in motion.</p>
       <div class="video r43"><iframe src="https://www.youtube-nocookie.com/embed/nz6S2erOrXc?rel=0" title="Atomic Heart — Jumping out of the car" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe></div>
 
-      <h3>New Game +</h3>
+      <h2>New Game +</h2>
       <p>A "New Game +" mode where the player is allowed to replay the game's story while retaining abilities, resources, and upgrades accumulated in the first playthrough. This mode introduces tougher versions of enemies with new abilities.</p>
       <div class="video r43"><iframe src="https://www.youtube-nocookie.com/embed/x1y_Io12uck?rel=0" title="Atomic Heart — New Game +" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe></div>
-    </article>
+      </article>
+      <aside class="toc-side" aria-label="On this page">
+        <p class="toc-title">On this page</p>
+        <ul class="toc-list" id="toc-side"></ul>
+      </aside>
+      </div>
 
       <nav class="pager" aria-label="Projects">
         <a class="prev" href="../#projects">← All projects</a>
-        <a class="next" href="tenet-of-the-spark.html">Next: Tenet of the Spark →</a>
+        <a class="next" href="encased.html">Next: Encased →</a>
       </nav>
     </main>
 
@@ -82,6 +90,6 @@
     </footer>
   </div>
 
-  <script src="../assets/site.js?v=3"></script>
+  <script src="../assets/site.js?v=4"></script>
 </body>
 </html>

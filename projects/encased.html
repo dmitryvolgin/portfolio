@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap">
-  <link rel="stylesheet" href="../assets/style.css?v=4">
+  <link rel="stylesheet" href="../assets/style.css?v=6">
   <script defer src="https://cloud.umami.is/script.js" data-website-id="734f66b2-72e3-453f-8a4b-711d15af3ee4"></script>
 </head>
 <body>
@@ -38,19 +38,22 @@
           <div><dt>Steam Page</dt><dd><a class="accent" href="https://store.steampowered.com/app/921800/Encased_A_SciFi_PostApocalyptic_RPG" target="_blank" rel="noopener" data-umami-event="steam-encased">View on Steam →</a></dd></div>
       </dl>
 
+      <div class="project-body">
       <article class="content">
-      <p>Encased is an isometric role-playing game in a sci-fi post-apocalyptic setting developed by Dark Crystal Games studio. It was inspired by the first two Fallout games, Divinity: Original Sin, Baldur’s Gate, and like.</p>
-      <p>The game is non-linear, allowing players to kill any in-game character, open any door and any chest, progress stealthily, play as a pacifist, act mentally powerless, work in a party, or go solo. Encased is highly systemic, where systems interact not only with the player but also with other systems and the game world around them.</p>
-      <p>As a gameplay scripter I was in charge of designing, documenting, prototyping, developing, iterating bug fixing, and polishing systems, events, quests, puzzles, secrets, and combat encounters.</p>
+      <p>Encased is an isometric role-playing game in a sci-fi post-apocalyptic setting developed by Dark Crystal Games studio. It was inspired by the first two Fallout games, Divinity: Original Sin, Baldur’s Gate, and the like.</p>
+      <p>The game is non-linear, allowing players to kill any in-game character, open any door and any chest, progress stealthily, play as a pacifist, play a low-intelligence character, work in a party, or go solo. Encased is highly systemic, where systems interact not only with the player but also with other systems and the game world around them.</p>
+      <p>As a gameplay scripter I was in charge of designing, documenting, prototyping, developing, iterating, bug fixing, and polishing systems, events, quests, puzzles, secrets, and combat encounters.</p>
       <p>Technologies I used on a daily basis:</p>
       <ul>
         <li>Unity engine as a base</li>
         <li>Custom in-house RPG framework</li>
-        <li>C# programming language.</li>
+        <li>C# programming language</li>
       </ul>
 
-      <p>Table of contents:</p>
-      <ul class="toc" id="toc"></ul>
+      <nav class="toc-card" aria-label="Contents">
+        <p class="toc-title">Contents</p>
+        <ol class="toc" id="toc"></ol>
+      </nav>
 
       <div class="callout">Please note: I did not create art, animations, UI, VFX, final texts, sound, engine-level programming, or low-level systems. These aspects were managed by other team members, with whom I closely collaborated during the development of each feature below.</div>
 
@@ -115,11 +118,16 @@
       <p>Vehicles allow the player to move faster on the global map, store items in the trunk, bypass certain random encounters, and honk the horn. While driving, the player encounters unique vehicle-related events. Vehicles are also integrated into the crime system: stealing or damaging a car belonging to another character is considered a crime.</p>
       <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/Xojtk1iJapM?rel=0" title="Encased — Vehicles" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe></div>
       <p>During the development process, numerous quests, events, and locations were adapted to integrate seamlessly with this system.</p>
-    </article>
+      </article>
+      <aside class="toc-side" aria-label="On this page">
+        <p class="toc-title">On this page</p>
+        <ul class="toc-list" id="toc-side"></ul>
+      </aside>
+      </div>
 
       <nav class="pager" aria-label="Projects">
         <a class="prev" href="../#projects">← All projects</a>
-        <a class="next" href="atomic-heart.html">Next: Atomic Heart →</a>
+        <a class="next" href="tenet-of-the-spark.html">Next: Tenet of the Spark →</a>
       </nav>
     </main>
 
@@ -129,6 +137,6 @@
     </footer>
   </div>
 
-  <script src="../assets/site.js?v=3"></script>
+  <script src="../assets/site.js?v=4"></script>
 </body>
 </html>
