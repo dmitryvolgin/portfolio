@@ -151,4 +151,8 @@ img { display: block; max-width: 100%; }
   .intro { padding: 72px 0 48px; }
   .project-top { padding: 64px 0 36px; }
   .project-top .sub { font-size: 19px; }
+  .work { grid-template-columns: repeat(2, 1fr); gap: 32px 14px; padding-bottom: 80px; }
+  .card { gap: 10px; }
+  .card h2 { font-size: 16px; }
+  .card .meta { font-size: 13px; }
 }
