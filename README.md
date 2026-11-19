@@ -16,7 +16,6 @@ The site will be available at `https://dmitryvolgin.github.io/portfolio/`.
 
 ## Analytics
 
-1. Create a free account at https://cloud.umami.is and add the site.
-2. In every HTML file, paste the Website ID into the commented-out Umami line in `<head>` and uncomment it.
+Umami Cloud script is included in every page `<head>` (website ID `734f66b2-72e3-453f-8a4b-711d15af3ee4`).
 
-Clicks on project cards, Steam links, Email and LinkedIn are already tagged with `data-umami-event` attributes, so they show up as events once analytics is enabled.
+Clicks on project cards, Steam links, Email and LinkedIn are already tagged with `data-umami-event` attributes, so they show up as events in the Umami dashboard.
