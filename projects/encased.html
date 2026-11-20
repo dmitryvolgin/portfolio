@@ -27,7 +27,7 @@
       <section class="project-top">
         <a class="back" href="../#projects">← All projects</a>
         <h1>Encased</h1>
-        <p class="sub">Dark Crystal Games · 2021 · Unity</p>
+        <p class="sub">Unity · C# · Custom RPG framework</p>
       </section>
 
       <div class="cover"><img src="../images/encased.jpg" onerror="this.remove()" alt="Encased cover" style="object-position: center"></div>
@@ -43,19 +43,13 @@
       <p>Encased is an isometric role-playing game in a sci-fi post-apocalyptic setting developed by Dark Crystal Games studio. It was inspired by the first two Fallout games, Divinity: Original Sin, Baldur’s Gate, and the like.</p>
       <p>The game is non-linear, allowing players to kill any in-game character, open any door and any chest, progress stealthily, play as a pacifist, play a low-intelligence character, work in a party, or go solo. Encased is highly systemic, where systems interact not only with the player but also with other systems and the game world around them.</p>
       <p>As a gameplay scripter I was in charge of designing, documenting, prototyping, developing, iterating, bug fixing, and polishing systems, events, quests, puzzles, secrets, and combat encounters.</p>
-      <p>Technologies I used on a daily basis:</p>
-      <ul>
-        <li>Unity engine as a base</li>
-        <li>Custom in-house RPG framework</li>
-        <li>C# programming language</li>
-      </ul>
 
       <nav class="toc-card" aria-label="Contents">
         <p class="toc-title">Contents</p>
         <ol class="toc" id="toc"></ol>
       </nav>
 
-      <div class="callout">Please note: I did not create art, animations, UI, VFX, final texts, sound, engine-level programming, or low-level systems. These aspects were managed by other team members, with whom I closely collaborated during the development of each feature below.</div>
+      <div class="callout">Art, animation, UI, VFX, writing, audio, and engine code were created by the team. My part is the gameplay design and implementation described below.</div>
 
       <h2>Gameplay Scripting</h2>
       <p>This section is primarily focused on my general responsibilities related to creating and scripting content on game locations.</p>
@@ -94,9 +88,10 @@
       </ul>
 
       <h3>Crime System</h3>
-      <p>A complex system managing the world's response to hostile or criminal player’s actions.</p>
-      <p>When the player commits a crime, it leaves behind evidence, prompting NPCs’ investigations. If the player is spotted, NPCs respond based on the severity of the crime. The player's choices include bribery, persuasion, intimidation, fines, combat, or imprisonment. In prison, all possessions are confiscated, and a prisoner's uniform is provided. The player can either wait out their sentence or attempt an escape, which is also considered a crime.</p>
-      <p>Eventually, this leads to a decline in reputation with the faction, resulting in potential ambushes. In settlements, residents may avoid interaction with the player.</p>
+      <p>A complex system managing the world's response to the player's hostile or criminal actions.</p>
+      <p>Every crime leaves behind evidence: physical objects in the world that NPCs literally discover. Once they find it, they start an investigation and patrol the surrounding area in search of the player. The severity of a crime is set by its most serious piece of evidence, with evidence severity defined in a config.</p>
+      <p>If the player is spotted, NPCs respond based on that severity. The player's options include bribery, persuasion, intimidation, fines, combat, or imprisonment. In prison, all possessions are confiscated and a prisoner's uniform is provided; the player can either wait out the sentence or attempt an escape, which is also a crime.</p>
+      <p>A case can also go cold: if no witness is left alive, it's closed, and if the player stays in disguise, hides, or leaves the location unseen, it's closed after a while. Otherwise, crimes lower the player's reputation with the faction, which can lead to ambushes, and settlement residents may avoid interacting with the player.</p>
       <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/64S9pCv78cs?rel=0" title="Encased — Crime System" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe></div>
       <p>During the development process, numerous quests and events were adapted to integrate seamlessly with the crime system.</p>
 
@@ -110,8 +105,8 @@
       <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/Tfph-SNI9O8?rel=0" title="Encased — Town Raids" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe></div>
 
       <h3>Abandoned Towns</h3>
-      <p>World reactivity for players to witness the consequences of their actions. This system implements the narrative of anomalies affecting the bodies of the dead.</p>
-      <p>If, for any reason, the majority of inhabitants in a settlement dies, the player returning to the location after some time will discover that the dead have transformed into hostile zombies. These zombies acquire names and inherit all the belongings of their predecessors. If there are still survivors in the settlement, the player can help them fight the zombies, or choose to leave.</p>
+      <p>World reactivity that lets players witness the consequences of their actions, built around the game's narrative of anomalies affecting the bodies of the dead.</p>
+      <p>If more than 80% of a settlement's inhabitants die, the dead turn into hostile zombies that keep their names and all of their belongings. The transformation happens only when the player returns to the location, which gives them a chance to save the survivors first, including characters needed for quests. If any survivors remain, the player can help them fight the zombies or choose to leave. Quest characters who turn keep their quest items in the zombie's inventory, so the game always stays completable.</p>
       <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/UtZ2umEFipU?rel=0" title="Encased — Abandoned Towns" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe></div>
 
       <h3>Vehicles</h3>

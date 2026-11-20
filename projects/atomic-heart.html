@@ -27,7 +27,7 @@
       <section class="project-top">
         <a class="back" href="../#projects">← All projects</a>
         <h1>Atomic Heart</h1>
-        <p class="sub">Mundfish · 2023 · Unreal Engine 4</p>
+        <p class="sub">Unreal Engine 4 · Blueprints · GAS · C++</p>
       </section>
 
       <div class="cover"><img src="../images/atomic-heart.jpg" onerror="this.remove()" alt="Atomic Heart cover" style="object-position: center"></div>
@@ -42,35 +42,46 @@
       <article class="content">
       <p>Atomic Heart is a first-person shooter in an alternative soviet setting developed by Mundfish studio.</p>
       <p>As a technical designer I was in charge of prototyping, developing, iterating, polishing, bug fixing, and optimization of gameplay systems, player abilities, and interactive content on levels.</p>
-      <p>Technologies I used on a daily basis:</p>
-      <ul>
-        <li>Unreal Engine 4 editor and tools</li>
-        <li>Blueprints</li>
-        <li>C++ programming language</li>
-      </ul>
 
       <nav class="toc-card" aria-label="Contents">
         <p class="toc-title">Contents</p>
         <ol class="toc" id="toc"></ol>
       </nav>
 
-      <div class="callout">Please note: I did not create art, animations, UI, VFX, final texts, sound, engine-level programming, or low-level systems. These aspects were managed by other team members, with whom I closely collaborated during the development of each feature below.</div>
+      <div class="callout">Art, animation, UI, VFX, writing, audio, and engine code were created by the team. My part is the gameplay design and implementation described below.</div>
 
       <h2>Ecosystem</h2>
       <p>A system that allows the player to disable all cameras and robots in the current region for some time. Disabled robots will re-activate upon taking damage.</p>
+      <p>I took over an old, non-working prototype built as one huge Blueprint. I brought it to a working state, restructured it, and moved the heaviest parts of the logic, such as searching for enemies, iterating over them, and checking which region they belong to, to C++. The real-time logic ran on a timer every few seconds instead of Tick, so it didn't load every frame.</p>
+      <p>The main challenge was level streaming. The open world is never fully loaded at once, so the Ecosystem state lived in a subsystem that isn't unloaded together with levels. Whenever a sublevel streamed in, every enemy on it queried the subsystem for its status and behaved accordingly. The state was also saved and correctly restored on loading a save.</p>
+      <p>Each Ecosystem region was an actor placed on the level, with a configurable radius and other parameters. I also built a debug mode that showed region radii and each enemy's connection status above its head, so level designers had everything they needed to set up and verify regions on their own.</p>
       <div class="video r43"><iframe src="https://www.youtube-nocookie.com/embed/BE2-tW1nlyM?rel=0" title="Atomic Heart — Ecosystem" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe></div>
+
+      <h2>Jumping out of the car</h2>
+      <p>The player's ability to jump out of the car while it's in motion, built as a GAS ability. The result depends on speed: at very low speed the car stops and the player simply gets out, at medium speed the player jumps out and falls without rolling, and at high speed they fall into a roll, as in the video. I also extended the car's code so it keeps rolling by inertia after the player leaves.</p>
+      <p>I worked closely with the animator on the blend and the sense of momentum. Root motion drives the character from the seated pose until they separate from the car; after that, the code takes over and positions the character based on a downward trace.</p>
+      <p>As the door starts to open, a sphere trace checks a few meters ahead to make sure there is room to land. If the way is blocked, the ability is canceled: the door opens just slightly and the animation plays back, so the player sees the input registered and stays in the car. Otherwise, a downward capsule trace finds the landing height, so the character never gets stuck on uneven terrain, and the camera and hands don't clip through the ground.</p>
+      <div class="video r43"><iframe src="https://www.youtube-nocookie.com/embed/nz6S2erOrXc?rel=0" title="Atomic Heart — Jumping out of the car" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe></div>
 
       <h2>Zipline</h2>
       <p>An interactive rope that allows the player to slide from start to finish.</p>
+      <p>I implemented it as a Gameplay Ability System (GAS) ability that blocks many other player abilities while active, so nothing interferes with the slide.</p>
       <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/_FYNzbw5jBA?rel=0" title="Atomic Heart — Zipline" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe></div>
-
-      <h2>Jumping out of the car</h2>
-      <p>The player's ability to jump out of the car while it's in motion.</p>
-      <div class="video r43"><iframe src="https://www.youtube-nocookie.com/embed/nz6S2erOrXc?rel=0" title="Atomic Heart — Jumping out of the car" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe></div>
 
       <h2>New Game +</h2>
       <p>A "New Game +" mode where the player is allowed to replay the game's story while retaining abilities, resources, and upgrades accumulated in the first playthrough. This mode introduces tougher versions of enemies with new abilities.</p>
+      <p>My part was mainly the enemy side. I built a dedicated component that is added to enemies automatically when they spawn. It defines their modifiers, upgrades, color indication, and so on, all configured through Data Assets. This keeps the base character class clean and lets the same setup move freely between characters of different classes and archetypes.</p>
       <div class="video r43"><iframe src="https://www.youtube-nocookie.com/embed/x1y_Io12uck?rel=0" title="Atomic Heart — New Game +" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe></div>
+
+      <h2>Level Scripting</h2>
+      <p>Scripting of interactive content on levels: events, triggers, doors and mechanisms, puzzles, and combat encounters.</p>
+
+      <h2>Optimization</h2>
+      <p>Profiling and optimization of gameplay code in Blueprints and C++, UI, and level content. A lot of this work meant moving logic from Tick to event-driven updates.</p>
+      <p>For example, one location had many rotating mixers with attached damage components, and they cut the frame rate in half: every frame, the engine recalculated overlaps for all of their moving collision. I replaced the collision-based damage with a math check that runs on Tick only for the mixer the player is near. After that, the mixers had no noticeable impact on performance.</p>
+
+      <h2>Release Stabilization</h2>
+      <p>Bug fixing and polishing before release in close collaboration with QA, followed by post-release patches. A large part of this work involved the save system: making sure every interactive element on levels saved its state and restored it correctly when a save was loaded.</p>
       </article>
       <aside class="toc-side" aria-label="On this page">
         <p class="toc-title">On this page</p>

@@ -27,13 +27,14 @@
       <section class="project-top">
         <a class="back" href="../#projects">← All projects</a>
         <h1>Tenet of the Spark</h1>
-        <p class="sub">ROAR Games · Upcoming · Unreal Engine 5</p>
+        <p class="sub">Unreal Engine 5 · Blueprints · GAS · C++</p>
       </section>
 
       <div class="cover"><img src="../images/tenet-of-the-spark.jpg" onerror="this.remove()" alt="Tenet of the Spark cover" style="object-position: center"></div>
 
       <dl class="props">
           <div><dt>Developer</dt><dd>ROAR Games</dd></div>
+          <div><dt>Release Date</dt><dd>To be announced</dd></div>
           <div><dt>Steam Page</dt><dd><a class="accent" href="https://store.steampowered.com/app/2565010/Tenet_of_the_Spark/" target="_blank" rel="noopener" data-umami-event="steam-tenet-of-the-spark">View on Steam →</a></dd></div>
       </dl>
 
@@ -42,20 +43,13 @@
       <p>Tenet of the Spark is a cinematic action game where you seamlessly switch between 3 timelines — modern day, Viking age, and Aztec world — to get the edge in battle. Crush enemies, solve time-bending puzzles, and explore 3 distinct worlds full of rich history and unique characters. Developed by ROAR Games studio.</p>
       <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/2imsx74Zv8U?rel=0" title="Tenet of the Spark — Trailer" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe></div>
       <p>As a technical designer I was in charge of prototyping, developing, iterating, polishing, bug fixing, and optimization of player mechanics, AI archetypes, gameplay systems, and interactive content on levels.</p>
-      <p>Technologies I used on a daily basis:</p>
-      <ul>
-        <li>Unreal Engine 5 editor and tools</li>
-        <li>Blueprints</li>
-        <li>Gameplay Ability System (GAS)</li>
-        <li>C++ programming language</li>
-      </ul>
 
       <nav class="toc-card" aria-label="Contents">
         <p class="toc-title">Contents</p>
         <ol class="toc" id="toc"></ol>
       </nav>
 
-      <div class="callout">Please note: Tenet of the Spark has not been released yet. All videos on this page show alpha footage from a work-in-progress build and do not represent the final quality of the game. The sections below describe my responsibilities only — I did not create art, animations, UI, VFX, final texts, sound, engine-level programming, or low-level systems. These aspects were managed by other team members, with whom I closely collaborated during the development of each feature below.</div>
+      <div class="callout">All videos show alpha footage from a work-in-progress build. Art, animation, UI, VFX, writing, audio, and engine code were created by the team. My part is the gameplay design and implementation described below.</div>
 
       <h2>Combat Mechanics</h2>
       <p>Design, prototyping, implementation, and iteration of the player's combat abilities. Each ability was built to reveal the personality and fighting style of its character: the Viking's brute strength, the Aztec's evasive ranged combat, and Will's agility and quick melee strikes.</p>
@@ -66,6 +60,7 @@
         <li>Pushing hammer strike</li>
         <li>Ground slam attack</li>
       </ul>
+      <p>For perfect block and dodge, I made a custom Anim Notify State that tells the Combat Manager when each timing window opens and closes, so the windows are set up directly on the animations.</p>
       <p>A compilation of combat ability prototypes for the Aztec and the Viking: pulling boomerang throw, pushing hammer strike, boomerang throw ricocheting between nearby enemies, double boomerang throw, and round boomerang throw.</p>
       <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/9jmk7lY-30A?rel=0" title="Tenet of the Spark — Combat Ability Prototypes" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe></div>
       <p>The Viking's special ground slam attack that deals area damage.</p>
@@ -78,7 +73,8 @@
         <li>Tank</li>
         <li>Roller</li>
       </ul>
-      <p>The Buffer archetype empowers its allies and keeps its distance from the player.</p>
+      <p>The Buffer archetype supports its allies and keeps its distance from the player. It's built with State Tree and EQS: level designers place points tagged as safe zones around the arena, and the Buffer moves to the one farthest from the player.</p>
+      <p>It first heals allies whose health drops below a threshold, then buffs a random ally. Buffs are Gameplay Effects with their own Gameplay Cues. When there is no one left to support, the Buffer falls back to throwing its staff at the player as a projectile and becomes a regular melee fighter.</p>
       <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/eCX4usfHyg0?rel=0" title="Tenet of the Spark — Buffer Archetype" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe></div>
 
       <h2>Boss Fight</h2>
@@ -117,6 +113,8 @@
         <li>Double wall jump</li>
         <li>Pickups</li>
       </ul>
+      <p>All interactive objects are Smart Objects, and the interaction with each of them is assembled in a State Tree from reusable tasks and conditions. Objects are connected through a separate puzzle actor: it listens to events from some objects (a generator turning on, a cart moving, a button being pressed) and drives the state of others (opening a door, lighting a lamp, and so on). Level designers build a puzzle by assigning object references in the puzzle actor's settings.</p>
+      <p>Each object is a single actor with a different look in each timeline, while its state is shared across all three. Lighting a fire in the Aztec world turns on the generator in Will's world, and putting the fire out turns the generator off.</p>
       <p>A garage door prototype, opened through a QTE.</p>
       <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/KhbaDFM-1ic?rel=0" title="Tenet of the Spark — Garage Door" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe></div>
       <p>A door the Viking breaks down.</p>
