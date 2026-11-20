@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Interactive Architectural Visualization — Dmitry Volgin</title>
+  <meta name="description" content="My role as a Senior Unreal Engine Developer at LUNAS: data-driven UE5 archviz configurators, C++ plugins and tools, networked kiosk, CPU optimization.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏙️</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="../assets/style.css?v=6">
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="734f66b2-72e3-453f-8a4b-711d15af3ee4"></script>
+</head>
+<body>
+  <div class="container">
+    <header class="site-header">
+      <a class="brand" href="../">Dmitry Volgin</a>
+      <nav class="nav" aria-label="Main">
+        <a href="../#projects">Projects</a>
+        <a href="../#about">About</a>
+        <a href="../#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="project-top">
+        <a class="back" href="../#projects">← All projects</a>
+        <h1>Interactive Architectural Visualization</h1>
+        <p class="sub">Unreal Engine 5 · Blueprints · C++ · UMG</p>
+      </section>
+
+      <div class="cover"><img src="../images/interactive-archviz.webp" onerror="this.remove()" alt="Interactive Architectural Visualization cover" style="object-position: center"></div>
+
+      <dl class="props">
+          <div><dt>Developer</dt><dd>LUNAS</dd></div>
+          <div><dt>Status</dt><dd>Ongoing</dd></div>
+          <div><dt>Website</dt><dd><a class="accent" href="https://www.lunas.pro/portfolio/ayla-oasis-interactive-3d-sales-platform/" target="_blank" rel="noopener" data-umami-event="website-lunas">View on lunas.pro →</a></dd></div>
+      </dl>
+
+      <div class="project-body">
+      <article class="content">
+      <p>L-Touch is an interactive 3D sales platform for real estate developed by LUNAS. Buyers explore a digital twin of a residential project and browse its units.</p>
+      <p>L-Touch platform overview.</p>
+      <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/qAucWmSvbgM?rel=0" title="L-Touch — Platform overview" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe></div>
+      <p>As a Senior Unreal Engine Developer I build and maintain the UE5 configurators behind it: architecture, C++ plugins and editor tools, networking, optimization, and support of legacy products.</p>
+
+      <nav class="toc-card" aria-label="Contents">
+        <p class="toc-title">Contents</p>
+        <ol class="toc" id="toc"></ol>
+      </nav>
+
+      <div class="callout">3D scenes, art, and UI design were created by the team. My part is the development work described below.</div>
+
+      <h2>Data-driven Configurators</h2>
+      <p>I architected the configurators to be data-driven, so they scale to projects with thousands of units. This includes the camera system, unit filtering and listings, CRM integration, and Arabic right-to-left localization.</p>
+      <p>Ayla Oasis, a project built on L-Touch.</p>
+      <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/K5SNyoT6WZo?rel=0" title="L-Touch — Ayla Oasis" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe></div>
+
+      <h2>C++ Plugins and Editor Tools</h2>
+      <p>I develop C++ plugins exposed to Blueprints, along with editor tools for artists and designers.</p>
+
+      <h2>Networked Kiosk</h2>
+      <p>A two-machine kiosk: a touch-screen controller and a wall display. I built the networking that keeps their state in sync over TCP and UDP.</p>
+
+      <h2>Optimization</h2>
+      <p>I own CPU optimization on Windows and Apple Silicon Macs. On the heaviest projects, I reduced game thread time from 80 ms to 3 ms by reworking tick-heavy systems, components, and UI.</p>
+
+      <h2>Legacy Support</h2>
+      <p>Maintaining legacy products and migrating them to the latest Unreal Engine versions, including fixing packaging, plugin, and cross-platform build issues.</p>
+      </article>
+      <aside class="toc-side" aria-label="On this page">
+        <p class="toc-title">On this page</p>
+        <ul class="toc-list" id="toc-side"></ul>
+      </aside>
+      </div>
+
+      <nav class="pager" aria-label="Projects">
+        <a class="prev" href="../#projects">← All projects</a>
+        <a class="next" href="tenet-of-the-spark.html">Next: Tenet of the Spark →</a>
+      </nav>
+    </main>
+
+    <footer class="site-footer">
+      <span>© 2026 Dmitry Volgin</span>
+      <a class="accent" href="mailto:dmitryvolgin1996@gmail.com" data-umami-event="contact-email">dmitryvolgin1996@gmail.com</a>
+    </footer>
+  </div>
+
+  <script src="../assets/site.js?v=4"></script>
+</body>
+</html>
