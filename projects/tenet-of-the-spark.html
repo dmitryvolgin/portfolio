@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap">
   <link rel="stylesheet" href="../assets/style.css?v=6">
-  <script defer src="https://cloud.umami.is/script.js" data-website-id="734f66b2-72e3-453f-8a4b-711d15af3ee4"></script>
+  <script defer src="https://cloud.umami.is/script.js" data-domains="dmitryvolgin.github.io" data-website-id="734f66b2-72e3-453f-8a4b-711d15af3ee4"></script>
 </head>
 <body>
   <div class="container">
@@ -41,7 +41,7 @@
       <div class="project-body">
       <article class="content">
       <p>Tenet of the Spark is a cinematic action game where you seamlessly switch between 3 timelines — modern day, Viking age, and Aztec world — to get the edge in battle. Crush enemies, solve time-bending puzzles, and explore 3 distinct worlds full of rich history and unique characters. Developed by ROAR Games studio.</p>
-      <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/2imsx74Zv8U?rel=0" title="Tenet of the Spark — Trailer" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe></div>
+      <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/2imsx74Zv8U?rel=0&enablejsapi=1" title="Tenet of the Spark — Trailer" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe></div>
       <p>As a technical designer I was in charge of prototyping, developing, iterating, polishing, bug fixing, and optimization of player mechanics, AI archetypes, gameplay systems, and interactive content on levels.</p>
 
       <nav class="toc-card" aria-label="Contents">
@@ -62,9 +62,9 @@
       </ul>
       <p>For perfect block and dodge, I made a custom Anim Notify State that tells the Combat Manager when each timing window opens and closes, so the windows are set up directly on the animations.</p>
       <p>A compilation of combat ability prototypes for the Aztec and the Viking: pulling boomerang throw, pushing hammer strike, boomerang throw ricocheting between nearby enemies, double boomerang throw, and round boomerang throw.</p>
-      <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/9jmk7lY-30A?rel=0" title="Tenet of the Spark — Combat Ability Prototypes" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe></div>
+      <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/9jmk7lY-30A?rel=0&enablejsapi=1" title="Tenet of the Spark — Combat Ability Prototypes" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe></div>
       <p>The Viking's special ground slam attack that deals area damage.</p>
-      <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/cfcLZXg4N1Y?rel=0" title="Tenet of the Spark — Viking Ground Slam" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe></div>
+      <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/cfcLZXg4N1Y?rel=0&enablejsapi=1" title="Tenet of the Spark — Viking Ground Slam" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe></div>
 
       <h2>AI Archetypes</h2>
       <p>Development of enemy archetypes, each with its own behaviour, attack patterns, and abilities. For every archetype I set up the full package — animations, VFX, and SFX — and tuned it together with the animation, audio, and combat design teams until the fight felt right.</p>
@@ -75,12 +75,12 @@
       </ul>
       <p>The Buffer archetype supports its allies and keeps its distance from the player. It's built with State Tree and EQS: level designers place points tagged as safe zones around the arena, and the Buffer moves to the one farthest from the player.</p>
       <p>It first heals allies whose health drops below a threshold, then buffs a random ally. Buffs are Gameplay Effects with their own Gameplay Cues. When there is no one left to support, the Buffer falls back to throwing its staff at the player as a projectile and becomes a regular melee fighter.</p>
-      <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/eCX4usfHyg0?rel=0" title="Tenet of the Spark — Buffer Archetype" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe></div>
+      <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/eCX4usfHyg0?rel=0&enablejsapi=1" title="Tenet of the Spark — Buffer Archetype" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe></div>
 
       <h2>Boss Fight</h2>
       <p>Implementation of the game's boss encounter: a fight across three phases, with all three worlds available to the player throughout. I built each phase with its animations, VFX, and SFX in place, then iterated with the design, animation, and audio teams on the pacing, the transitions between phases, and the scripted beats that frame the fight.</p>
       <p>The first two phases of the boss fight, each with its own set of boss abilities. In the third phase, the boss fights as a regular melee enemy.</p>
-      <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/mi5ttHNdzlM?rel=0" title="Tenet of the Spark — Boss Fight" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe></div>
+      <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/mi5ttHNdzlM?rel=0&enablejsapi=1" title="Tenet of the Spark — Boss Fight" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe></div>
 
       <h2>Combat Environment</h2>
       <p>Development of the environmental hazards that make the surroundings part of the fight, and their behaviour across timelines.</p>
@@ -92,13 +92,13 @@
         <li>Combat destructibles</li>
       </ul>
       <p>A column the Viking can topple onto enemies.</p>
-      <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/6hDNvxVYvp8?rel=0" title="Tenet of the Spark — Pushable Column" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe></div>
+      <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/6hDNvxVYvp8?rel=0&enablejsapi=1" title="Tenet of the Spark — Pushable Column" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe></div>
       <p>A brazier in the Aztec world: hit by the boomerang, it explodes and deals area damage.</p>
-      <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/Nixx1NRcFoc?rel=0" title="Tenet of the Spark — Exploding Brazier" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe></div>
+      <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/Nixx1NRcFoc?rel=0&enablejsapi=1" title="Tenet of the Spark — Exploding Brazier" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe></div>
       <p>The Viking throws enemies into a brazier, which also deals area damage.</p>
-      <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/iuT0bNmfjls?rel=0" title="Tenet of the Spark — Throwing Enemies into a Brazier" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe></div>
+      <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/iuT0bNmfjls?rel=0&enablejsapi=1" title="Tenet of the Spark — Throwing Enemies into a Brazier" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe></div>
       <p>The Viking throws enemies off a cliff.</p>
-      <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/SlPLibFH8AY?rel=0" title="Tenet of the Spark — Throwing Enemies into a Pit" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe></div>
+      <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/SlPLibFH8AY?rel=0&enablejsapi=1" title="Tenet of the Spark — Throwing Enemies into a Pit" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe></div>
 
       <h2>Interactive Environment and Puzzles</h2>
       <p>Implementation of the smart objects that level designers build encounters, traversal, and puzzles out of, along with the systems underneath them. A large part of this work was supporting level designers directly: scripting the setups they needed, and making the objects configurable enough for them to build and iterate on content.</p>
@@ -116,19 +116,19 @@
       <p>All interactive objects are Smart Objects, and the interaction with each of them is assembled in a State Tree from reusable tasks and conditions. Objects are connected through a separate puzzle actor: it listens to events from some objects (a generator turning on, a cart moving, a button being pressed) and drives the state of others (opening a door, lighting a lamp, and so on). Level designers build a puzzle by assigning object references in the puzzle actor's settings.</p>
       <p>Each object is a single actor with a different look in each timeline, while its state is shared across all three. Lighting a fire in the Aztec world turns on the generator in Will's world, and putting the fire out turns the generator off.</p>
       <p>A garage door prototype, opened through a QTE.</p>
-      <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/KhbaDFM-1ic?rel=0" title="Tenet of the Spark — Garage Door" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe></div>
+      <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/KhbaDFM-1ic?rel=0&enablejsapi=1" title="Tenet of the Spark — Garage Door" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe></div>
       <p>A door the Viking breaks down.</p>
-      <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/aJqyvlr-Cdo?rel=0" title="Tenet of the Spark — Breakable Door" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe></div>
+      <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/aJqyvlr-Cdo?rel=0&enablejsapi=1" title="Tenet of the Spark — Breakable Door" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe></div>
       <p>A puzzle element: a platform the Viking can rotate, combined with the Aztec's wall jump.</p>
-      <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/fH9wQUHGRQg?rel=0" title="Tenet of the Spark — Rotatable Platform" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe></div>
+      <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/fH9wQUHGRQg?rel=0&enablejsapi=1" title="Tenet of the Spark — Rotatable Platform" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe></div>
       <p>A cart prototype the player can climb onto to get over high obstacles.</p>
-      <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/_wDoaG2W3zg?rel=0" title="Tenet of the Spark — Pushable Cart" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe></div>
+      <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/_wDoaG2W3zg?rel=0&enablejsapi=1" title="Tenet of the Spark — Pushable Cart" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe></div>
       <p>A puzzle element: a wagon the Viking can flip over, combined with the Aztec's wall jump.</p>
-      <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/ZzWI-Mpt1TU?rel=0" title="Tenet of the Spark — Flippable Wagon" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe></div>
+      <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/ZzWI-Mpt1TU?rel=0&enablejsapi=1" title="Tenet of the Spark — Flippable Wagon" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe></div>
       <p>An overhead crane prototype that moves objects with a hook loop within a set area.</p>
-      <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/rEt56SckfJQ?rel=0" title="Tenet of the Spark — Overhead Crane" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe></div>
+      <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/rEt56SckfJQ?rel=0&enablejsapi=1" title="Tenet of the Spark — Overhead Crane" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe></div>
       <p>Puzzle generators: in Will's world they are generators, in the Aztec world they are fires to be lit.</p>
-      <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/WzmKlUaVkpA?rel=0" title="Tenet of the Spark — Puzzle Generators" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe></div>
+      <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/WzmKlUaVkpA?rel=0&enablejsapi=1" title="Tenet of the Spark — Puzzle Generators" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe></div>
 
       <h2>Scripted Events</h2>
       <p>Scripting of the in-game events that carry the narrative and drive the cinematic pacing of the levels, coordinating gameplay logic with animation, VFX, and sound so that each moment lands the way it was designed.</p>
@@ -137,7 +137,7 @@
         <li>Flashbacks</li>
       </ul>
       <p>A narrative interaction used as a storytelling tool.</p>
-      <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/wEpGQVg4qwI?rel=0" title="Tenet of the Spark — Narrative Object" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe></div>
+      <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/wEpGQVg4qwI?rel=0&enablejsapi=1" title="Tenet of the Spark — Narrative Object" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe></div>
 
       <h2>Camera Modes</h2>
       <p>Implementation and tuning of the game's camera modes to support the cinematic presentation. This included handing control between gameplay and scripted moments, and keeping the framing readable during timeline switches.</p>
@@ -167,6 +167,6 @@
     </footer>
   </div>
 
-  <script src="../assets/site.js?v=4"></script>
+  <script src="../assets/site.js?v=6"></script>
 </body>
 </html>

@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap">
   <link rel="stylesheet" href="../assets/style.css?v=6">
-  <script defer src="https://cloud.umami.is/script.js" data-website-id="734f66b2-72e3-453f-8a4b-711d15af3ee4"></script>
+  <script defer src="https://cloud.umami.is/script.js" data-domains="dmitryvolgin.github.io" data-website-id="734f66b2-72e3-453f-8a4b-711d15af3ee4"></script>
 </head>
 <body>
   <div class="container">
@@ -55,23 +55,23 @@
       <p>I took over an old, non-working prototype built as one huge Blueprint. I brought it to a working state, restructured it, and moved the heaviest parts of the logic, such as searching for enemies, iterating over them, and checking which region they belong to, to C++. The real-time logic ran on a timer every few seconds instead of Tick, so it didn't load every frame.</p>
       <p>The main challenge was level streaming. The open world is never fully loaded at once, so the Ecosystem state lived in a subsystem that isn't unloaded together with levels. Whenever a sublevel streamed in, every enemy on it queried the subsystem for its status and behaved accordingly. The state was also saved and correctly restored on loading a save.</p>
       <p>Each Ecosystem region was an actor placed on the level, with a configurable radius and other parameters. I also built a debug mode that showed region radii and each enemy's connection status above its head, so level designers had everything they needed to set up and verify regions on their own.</p>
-      <div class="video r43"><iframe src="https://www.youtube-nocookie.com/embed/BE2-tW1nlyM?rel=0" title="Atomic Heart — Ecosystem" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe></div>
+      <div class="video r43"><iframe src="https://www.youtube-nocookie.com/embed/BE2-tW1nlyM?rel=0&enablejsapi=1" title="Atomic Heart — Ecosystem" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe></div>
 
       <h2>Jumping out of the car</h2>
       <p>The player's ability to jump out of the car while it's in motion, built as a GAS ability. The result depends on speed: at very low speed the car stops and the player simply gets out, at medium speed the player jumps out and falls without rolling, and at high speed they fall into a roll, as in the video. I also extended the car's code so it keeps rolling by inertia after the player leaves.</p>
       <p>I worked closely with the animator on the blend and the sense of momentum. Root motion drives the character from the seated pose until they separate from the car; after that, the code takes over and positions the character based on a downward trace.</p>
       <p>As the door starts to open, a sphere trace checks a few meters ahead to make sure there is room to land. If the way is blocked, the ability is canceled: the door opens just slightly and the animation plays back, so the player sees the input registered and stays in the car. Otherwise, a downward capsule trace finds the landing height, so the character never gets stuck on uneven terrain, and the camera and hands don't clip through the ground.</p>
-      <div class="video r43"><iframe src="https://www.youtube-nocookie.com/embed/nz6S2erOrXc?rel=0" title="Atomic Heart — Jumping out of the car" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe></div>
+      <div class="video r43"><iframe src="https://www.youtube-nocookie.com/embed/nz6S2erOrXc?rel=0&enablejsapi=1" title="Atomic Heart — Jumping out of the car" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe></div>
 
       <h2>Zipline</h2>
       <p>An interactive rope that allows the player to slide from start to finish.</p>
       <p>I implemented it as a Gameplay Ability System (GAS) ability that blocks many other player abilities while active, so nothing interferes with the slide.</p>
-      <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/_FYNzbw5jBA?rel=0" title="Atomic Heart — Zipline" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe></div>
+      <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/_FYNzbw5jBA?rel=0&enablejsapi=1" title="Atomic Heart — Zipline" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe></div>
 
       <h2>New Game +</h2>
       <p>A "New Game +" mode where the player is allowed to replay the game's story while retaining abilities, resources, and upgrades accumulated in the first playthrough. This mode introduces tougher versions of enemies with new abilities.</p>
       <p>My part was mainly the enemy side. I built a dedicated component that is added to enemies automatically when they spawn. It defines their modifiers, upgrades, color indication, and so on, all configured through Data Assets. This keeps the base character class clean and lets the same setup move freely between characters of different classes and archetypes.</p>
-      <div class="video r43"><iframe src="https://www.youtube-nocookie.com/embed/x1y_Io12uck?rel=0" title="Atomic Heart — New Game +" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe></div>
+      <div class="video r43"><iframe src="https://www.youtube-nocookie.com/embed/x1y_Io12uck?rel=0&enablejsapi=1" title="Atomic Heart — New Game +" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe></div>
 
       <h2>Level Scripting</h2>
       <p>Scripting of interactive content on levels: events, triggers, doors and mechanisms, puzzles, and combat encounters.</p>
@@ -101,6 +101,6 @@
     </footer>
   </div>
 
-  <script src="../assets/site.js?v=4"></script>
+  <script src="../assets/site.js?v=6"></script>
 </body>
 </html>
