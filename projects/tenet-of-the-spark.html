@@ -52,7 +52,7 @@
       <div class="callout">All videos show alpha footage from a work-in-progress build. Art, animation, UI, VFX, writing, audio, and engine code were created by the team. My part is the gameplay design and implementation described below.</div>
 
       <h2>Combat Mechanics</h2>
-      <p>Design, prototyping, implementation, and iteration of the player's combat abilities. Each ability was built to reveal the personality and fighting style of its character: the Viking's brute strength, the Aztec's evasive ranged combat, and Will's agility and quick melee strikes.</p>
+      <p>Design, prototyping, implementation, and iteration of the player's combat abilities, all built as Gameplay Ability System (GAS) abilities in Blueprints. Each ability was built to reveal the personality and fighting style of its character: the Viking's brute strength, the Aztec's evasive ranged combat, and Will's agility and quick melee strikes.</p>
       <ul>
         <li>Perfect block and perfect dodge abilities and windows</li>
         <li>Charged attacks for each of the three worlds, with the Aztec charged attacks as my main focus</li>
@@ -68,17 +68,23 @@
 
       <h2>AI Archetypes</h2>
       <p>Development of enemy archetypes, each with its own behaviour, attack patterns, and abilities. For every archetype I set up the full package — animations, VFX, and SFX — and tuned it together with the animation, audio, and combat design teams until the fight felt right.</p>
-      <ul>
-        <li>Buffer</li>
-        <li>Tank</li>
-        <li>Roller</li>
-      </ul>
-      <p>The Buffer archetype supports its allies and keeps its distance from the player. It's built with State Tree and EQS: level designers place points tagged as safe zones around the arena, and the Buffer moves to the one farthest from the player.</p>
+      <p>Every enemy attack is an Anim Montage set up with Anim Notify States: they speed up or slow down playback and mark the Preparation, Execution, and Recovery windows. A root motion window is set up the same way: the enemy uses it to close in on the player and turn toward them before the strike.</p>
+
+      <h3>Buffer</h3>
+      <p>Its role in combat is to become the player's first target, since it heals and buffs the other enemies. The Buffer keeps its distance from the player. It's built with State Tree and EQS: level designers place points tagged as safe zones around the arena, and the Buffer moves to the one farthest from the player.</p>
       <p>It first heals allies whose health drops below a threshold, then buffs a random ally. Buffs are Gameplay Effects with their own Gameplay Cues. When there is no one left to support, the Buffer falls back to throwing its staff at the player as a projectile and becomes a regular melee fighter.</p>
       <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/eCX4usfHyg0?rel=0&enablejsapi=1" title="Tenet of the Spark — Buffer Archetype" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe></div>
 
+      <h3>Tank</h3>
+      <p>A slow enemy with a shield. From the front, Will and the Aztec can't get through it; only the Viking can break the shield. The Tank's Charge attack sends it running at the player until it reaches them or hits an obstacle.</p>
+      <p>Its weakness is its back: while the Tank turns around, Will and the Aztec have time to get behind it and attack.</p>
+
+      <h3>Roller</h3>
+      <p>A fast enemy on roller skates. It keeps its distance from the player and closes in only to land a quick glancing strike. The Viking and Will can hardly catch it, but the Aztec can defeat it at range.</p>
+
       <h2>Boss Fight</h2>
       <p>Implementation of the game's boss encounter: a fight across three phases, with all three worlds available to the player throughout. I built each phase with its animations, VFX, and SFX in place, then iterated with the design, animation, and audio teams on the pacing, the transitions between phases, and the scripted beats that frame the fight.</p>
+      <p>The first phase forces the player to switch characters. For example, in Will's world the boss draws a pistol, which in the other worlds becomes a crossbow that takes him a long time to load. The player can use that time to stun him with a hit from the Aztec's boomerang.</p>
       <p>The first two phases of the boss fight, each with its own set of boss abilities. In the third phase, the boss fights as a regular melee enemy.</p>
       <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/mi5ttHNdzlM?rel=0&enablejsapi=1" title="Tenet of the Spark — Boss Fight" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe></div>
 

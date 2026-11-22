@@ -77,7 +77,7 @@
       <p>Scripting of interactive content on levels: events, triggers, doors and mechanisms, puzzles, and combat encounters.</p>
 
       <h2>Optimization</h2>
-      <p>Profiling and optimization of gameplay code in Blueprints and C++, UI, and level content. A lot of this work meant moving logic from Tick to event-driven updates.</p>
+      <p>Profiling with Unreal Insights and optimization of gameplay code in Blueprints and C++, UI, and level content for a game that shipped on PC, PS4, Xbox One, PS5, and Xbox Series X|S. A lot of this work meant moving logic from Tick to event-driven updates.</p>
       <p>For example, one location had many rotating mixers with attached damage components, and they cut the frame rate in half: every frame, the engine recalculated overlaps for all of their moving collision. I replaced the collision-based damage with a math check that runs on Tick only for the mixer the player is near. After that, the mixers had no noticeable impact on performance.</p>
 
       <h2>Release Stabilization</h2>
