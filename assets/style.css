@@ -38,7 +38,7 @@ img { display: block; max-width: 100%; }
   padding: 40px 0 0;
   display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px;
 }
-.brand { font-weight: 600; font-size: 17px; }
+.brand { font-weight: 600; font-size: 26px; letter-spacing: -0.01em; }
 .nav { display: flex; flex-wrap: wrap; gap: 28px; font-size: 16px; }
 .nav a { color: var(--nav); }
 
